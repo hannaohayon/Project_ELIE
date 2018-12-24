@@ -4,17 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BE;
+using DAL;
 
 namespace BL
 {
     class BL_imp : IBL
     {
+        public IDAL DAL = new DAL_imp;
         #region ADD
 
         public void AddTest(Test t)
         {
-            throw new NotImplementedException();
-
+            //throw new NotImplementedException();
+            DAL.AddTest(t);
             
         }
 
